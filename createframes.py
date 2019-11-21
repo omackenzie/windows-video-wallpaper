@@ -22,9 +22,10 @@ def create_frames(path):
 
 def main():
     path = input("Enter the path of the video: ")
+    if not os.path.exists(f"{os.getcwd()}/frames"):
+        os.makedirs(f"{os.getcwd()}/frames")
+        
     create_frames(path)
 
 if __name__ == "__main__":
-    if not os.path.exists(f"{os.getcwd()}/frames"):
-        os.makedirs(f"{os.getcwd()}/frames")
     main()
